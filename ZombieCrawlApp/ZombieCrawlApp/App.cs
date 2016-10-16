@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Xamarin.Facebook;
+using Xamarin.Facebook.Login.Widget;
 using Xamarin.Forms;
 
 namespace ZombieCrawlApp
 {
 	public class App : Application
 	{
+        private ICallbackManager callbackManager;
+
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							HorizontalTextAlignment = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
+            // The root page of your application
+            MainPage = new ContentPage {
+                Content = new StackLayout {
+                    VerticalOptions = LayoutOptions.Center,
+                    Children = {
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = "Welcome to Xamarin Forms!"
+                        }
 					}
 				}
 			};
